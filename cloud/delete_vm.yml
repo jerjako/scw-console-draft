@@ -1,0 +1,18 @@
+- name: "create a vm and deploy"
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Gather Scaleway organizations facts
+      scaleway_organization_facts:
+
+    - name: "Delete vm"
+      scaleway_compute:
+        name: console-draft
+        state: absent
+        image: "{{scwimage}}"
+        organization: "{{scaleway_organization_facts[0].id}}"
+        region: par1
+        commercial_type: DEV1-S
+        wait: true
+        tags: ["console-draft"]
+        public_ip: dynamic

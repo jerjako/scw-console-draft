@@ -1,0 +1,126 @@
+#edit-zone {
+    z-index: 21;
+}
+
+#edit-zone .top {
+    position: relative;
+}
+#edit-zone .top input {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#edit-zone .add {
+    position: relative;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 0 0 0;
+}
+#edit-zone .add .add-record {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+#edit-zone .add h2 {
+    font-size: 17px;
+    margin: 0 0 20px;
+    padding: 0;
+    font-weight: 600;
+    line-height: 48px;
+}
+#edit-zone .add .line select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    transform: none;
+}
+
+#edit-zone .loading {
+    color: rgb(178, 182, 195);
+    font-style: italic;
+}
+
+#edit-zone .line {
+    display: table;
+    white-space: nowrap;
+    padding: 5px 3px;
+    position: relative;
+    width: 100%;
+    line-height: 48px;
+}
+
+#edit-zone .line.first > div {
+    font-weight: 500;
+}
+#edit-zone .line > div {
+    padding: 0 5px 0 0;
+}
+
+#edit-zone .line input[type=text],
+#edit-zone .line select {
+    width: 100%;
+    text-overflow: ellipsis;
+}
+#edit-zone .line select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 47px;
+    transform: translateY(-2px);
+    position: relative;
+    font-size: 16px;
+    color: rgb(74, 79, 98);
+}
+
+
+#edit-zone .results .line input[type=text]:not(:hover):not(:focus),
+#edit-zone .results .line select:not(:hover):not(:focus) {
+    border-color: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    padding-left: 8px;
+}
+#edit-zone .results .line select:not(:hover):not(:focus) {
+    padding-bottom: 1px;
+}
+#edit-zone .results .line input[type=text]::placeholder {
+    font-size: 12px;
+    color: #bbb;
+    font-style: italic;
+}
+
+#edit-zone .line .name {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    font-weight: 600;
+}
+#edit-zone .line .type {
+    display: table-cell;
+    vertical-align: top;
+    width: 155px;
+}
+#edit-zone .line .data {
+    display: table-cell;
+    vertical-align: top;
+    width: 300px;
+}
+#edit-zone .line .priority {
+    display: table-cell;
+    vertical-align: top;
+    width: 80px;
+}
+#edit-zone .line .ttl {
+    display: table-cell;
+    vertical-align: top;
+    width: 80px;
+}
+#edit-zone .line .action {
+    display: table-cell;
+    vertical-align: top;
+    width: 100px;
+}

@@ -1,0 +1,63 @@
+#edit-domain .loading {
+    color: rgb(178, 182, 195);
+    font-style: italic;
+}
+
+#edit-domain .items {
+    position: relative;
+}
+
+#edit-domain .items .item {
+    display: inline-block;
+    vertical-align: top;
+    width: 184px;
+    margin-bottom: 10px;
+}
+
+#edit-domain .items .item b {
+    display: block;
+    font-weight: 500;
+}
+
+#edit-domain .items .item .text-status {
+    position: relative;
+    padding-left: 14px;
+    text-transform: capitalize;
+}
+
+#edit-domain .items .item .text-status.active:before {
+    content: "";
+    background-color: #91d025;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+#edit-domain .line {
+    display: table;
+    white-space: nowrap;
+    padding: 5px 3px;
+    position: relative;
+    width: 100%;
+    line-height: 48px;
+}
+
+#edit-domain .line.first > div {
+    font-weight: 500;
+}
+
+#edit-domain .line .name {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    font-weight: 600;
+}
+
+#edit-domain .line .action {
+    display: table-cell;
+    vertical-align: top;
+    width: 100px;
+}

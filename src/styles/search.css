@@ -1,0 +1,48 @@
+#search .search-loading {
+    display: none;
+    color: rgb(178, 182, 195);
+    font-style: italic;
+}
+#search .search-loading.show {
+    display: block;
+}
+
+#search .search-results {
+    display: none;
+}
+#search .search-results.show {
+    display: block;
+}
+
+#search .line {
+    display: table;
+    white-space: nowrap;
+    padding: 5px 3px;
+    position: relative;
+    width: 100%;
+    line-height: 48px;
+}
+
+#search .line:not(:last-child) {
+    border-bottom: 1px solid rgb(220, 225, 235);
+}
+
+#search .line .domain {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    font-weight: bolder;
+}
+
+#search .line .available,
+#search .line .not-available {
+    display: table-cell;
+    vertical-align: top;
+    width: 150px;
+    text-align: center;
+}
+
+#search .line .not-available {
+    color: rgb(239, 87, 116);
+    font-weight: bold;
+}

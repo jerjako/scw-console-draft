@@ -1,0 +1,73 @@
+#list .loading {
+    color: rgb(178, 182, 195);
+    font-style: italic;
+}
+
+#list .line {
+    display: table;
+    white-space: nowrap;
+    padding: 5px 3px;
+    position: relative;
+    width: 100%;
+    line-height: 48px;
+}
+
+#list .line:not(:last-child) {
+    border-bottom: 1px solid rgb(220, 225, 235);
+}
+
+#list .line.first > div {
+    font-weight: 500;
+}
+
+#list .line .domain {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    font-weight: 600;
+}
+
+#list .line .type {
+    display: table-cell;
+    vertical-align: top;
+    width: 100px;
+}
+#list .line .expiration {
+    display: table-cell;
+    vertical-align: top;
+    width: 200px;
+}
+#list .line .autorenew {
+    display: table-cell;
+    vertical-align: top;
+    width: 150px;
+}
+#list .line .locked {
+    display: table-cell;
+    vertical-align: top;
+    width: 150px;
+}
+#list .line .locked i {
+    display: block;
+    font-size: 10px;
+    color: #ccc;
+    position: absolute;
+    margin-top: -35px;
+}
+#list .line .action,
+#list .line .status {
+    display: table-cell;
+    vertical-align: top;
+    width: 120px;
+    text-align: right;
+}
+
+#list .line .status {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 13px;
+    color: rgb(239, 87, 116);
+    text-transform: capitalize;
+    line-height: 15px;
+    vertical-align: middle;
+}

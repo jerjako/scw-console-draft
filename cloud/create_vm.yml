@@ -1,0 +1,28 @@
+- name: "create a vm and deploy"
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Gather Scaleway images facts
+      scaleway_image_facts:
+        region: par1
+    - name: Find a suitable Ubuntu Docker image
+      set_fact:
+        scwimage: "{{item.id}}"
+        cacheable: true
+      when: item.arch == "x86_64" and item.name == "Docker" and item.root_volume.size <= 20000000000
+      loop: "{{ scaleway_image_facts }}"
+
+    - name: Gather Scaleway organizations facts
+      scaleway_organization_facts:
+
+    - name: "Create vm"
+      scaleway_compute:
+        name: console-draft
+        state: running
+        image: "{{scwimage}}"
+        organization: "{{scaleway_organization_facts[0].id}}"
+        region: par1
+        commercial_type: DEV1-S
+        wait: true
+        tags: ["console-draft"]
+        public_ip: dynamic

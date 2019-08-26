@@ -1,0 +1,16 @@
+- hosts: console-draft
+  tasks:
+    - name: "Copy the project data"
+      copy:
+        src: ../
+        dest: /root/project
+    - name: deploy the project
+      docker_compose:
+        project_src: /root/project
+        recreate: always
+        state: present
+    - name: installation done
+      debug:
+        msg:
+            - "you can connect to http://{{ ansible_host }}:8080"
+            - "with your API token, you will able to log to manage your Domain services"
